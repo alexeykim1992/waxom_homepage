@@ -28,8 +28,8 @@ path: {
                 libs: 'app/build/libs/'
             },
             watch: {
-                html: ['app/src/*.html', 'app/src/view/'],
-                style: 'app/src/styles/**/*.*',
+                html: ['app/src/*.html', 'app/src/views/'],
+                style: 'app/src/styles/**/**/*.*',
                 js: 'app/src/scripts/**/*.*',
                 img: 'app/src/images/**/*.{png,jpg,jpeg,webp,gif}',
                 fonts: 'app/src/fonts/**/*.*',

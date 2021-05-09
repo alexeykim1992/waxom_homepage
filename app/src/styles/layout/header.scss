@@ -1,0 +1,9 @@
+@import 'components/header-nav';
+
+.header{
+    background: url(../images/header_bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
