@@ -1,0 +1,53 @@
+.main-services{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &-icon{
+            font-size: 50px;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        &:hover &-icon{
+            color: #c7b299;
+        }
+
+        &-title{
+            font-family: $raleway;
+            font-size: 22px;
+            font-weight: 600;            
+            color: #555555;
+            line-height: 17px;
+            margin-bottom: 20px;
+        }
+
+        &:hover &-title{
+            color: #c7b299;
+        }
+
+        &-description{
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 14px;
+            color: #8c8c8c;
+            line-height: 25px;
+            max-width: 270px;
+            margin-bottom: 30px;
+        }
+
+        &:hover::after{
+            content: "";
+            height: 3px;
+            width: 70px;
+            background: #c7b299;
+        }
+    }
+}
