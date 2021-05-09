@@ -30,7 +30,7 @@
     }
 
     &__list{
-        &_link{ 
+        .navbar-expand-lg .navbar-nav &_link.nav-link{ 
             color: white;
             font-family: $montserrat;
             font-weight: 300;
@@ -47,8 +47,4 @@
         margin-left: 28px;
     }
    
-}
-
-.navbar-expand-lg .navbar-nav .nav-link {
-    padding: 0;
 }

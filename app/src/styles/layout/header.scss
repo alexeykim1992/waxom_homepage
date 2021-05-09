@@ -1,9 +1,15 @@
-@import 'components/header-nav';
+@import 'components/header-nav',
+        'components/header-content';
 
 .header{
     background: url(../images/header_bg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+
+    &-row{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
 }
