@@ -45,22 +45,6 @@
             max-width: 570px;
             margin-bottom: 50px;
         }
-
-        &-link {
-            font-family: $raleway;
-            font-weight: 800;
-            font-size: 14px;
-            line-height: 11px;
-            padding: 21px 37px;
-            color: white;
-            background: #998675;
-            border-radius: 3px;
-            border-bottom: 3px solid #736357;
-
-            &:hover {
-                color: white;
-            }
-        }
     }
 
     &__arrow {
