@@ -43,10 +43,14 @@
             margin-bottom: 30px;
         }
 
-        &:hover::after{
+        &::after{
             content: "";
             height: 3px;
             width: 70px;
+            background: transparent;
+        }
+
+        &:hover::after{
             background: #c7b299;
         }
     }
