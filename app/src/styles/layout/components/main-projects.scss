@@ -1,0 +1,155 @@
+.projects {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__title {
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 30px;
+        color: #555555;
+        text-align: center;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        font-family: $montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        color: #8c8c8c;
+        text-align: center;
+        max-width: 770px;
+        line-height: 28px;
+        margin-bottom: 35px;
+    }
+
+    &__tabs {
+        display: flex;
+        margin-bottom: 40px;
+
+        &-link {
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 14px;
+            color: #8c8c8c;
+            background: white;
+            border: 1px solid #ebebeb;
+            border-radius: 3px;
+            padding: 10px 17px;
+            line-height: 10px;
+            margin: 0 5px;
+
+            &:hover {
+                color: #8c8c8c;
+            }
+        }
+
+        &-link.active {
+            color: white;
+            background: #998675;
+        }
+    }
+
+    &__cards {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+
+        &-item {
+            display: block;
+            position: relative;
+
+            &:hover &-overlay{
+                opacity: 1;
+            }
+
+            &:hover &-label{
+                background: #362f2d;
+            }
+
+            &:hover &-label::before{                
+                border-bottom: 10px solid #362f2d;                
+            }
+
+            &:hover &-title{
+                color: white;
+            }
+
+            &:hover &-description{
+                color: #c7b299;
+            }
+
+            &-overlay {
+                position: absolute;
+                left: 0;
+                top: 0;                
+                opacity: 0;
+                background: rgba(0, 0, 0, 0.5);
+                height: 240px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &_link {
+                    font-size: 25px;
+                    color: #c7b299;
+                    margin: 0 15px;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+
+            &-img {
+                height: 240px;
+                width: 100%;
+            }
+
+            &-label {
+                display: block;
+                position: relative;
+                background: #fbfaf8;
+                padding: 30px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    top: -10px;
+                    left: 20px;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-bottom: 10px solid white;
+                }
+            }
+
+            &-title {
+                font-family: $raleway;
+                font-weight: 500;
+                font-size: 20px;
+                color: #c7b299;
+                line-height: 15px;
+                margin-bottom: 15px;
+            }
+
+            &-description {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 14px;
+                color: #d1d1d1;
+                line-height: 10px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
