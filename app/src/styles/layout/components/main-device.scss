@@ -1,0 +1,55 @@
+.main-device{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+
+    &__panel{
+        padding-top: 115px;
+        padding-bottom: 180px;
+    }
+
+    &__title{
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 30px;
+        color: #555555;
+        line-height: 22px;
+        margin-bottom: 35px;
+    }
+
+    &__description{
+        font-family: $montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        color: #8c8c8c;
+        line-height: 28px;
+        margin-bottom: 38px;
+    }
+
+    &__list{
+        margin-left: 35px;
+
+        &-item{
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 16px;
+            color: #8c8c8c;
+            margin-bottom: 12px;
+
+            & i{                
+                margin-right: 25px;
+                width: 21px;
+                height: 21px;
+                padding: 5px 8px;
+                border-radius: 50%;
+                font-size: 11px;
+                color: white;
+                background: #c7b299;
+            }
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
