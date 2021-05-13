@@ -1,0 +1,179 @@
+.main-posts {
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 30px;
+        color: #555555;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__description {
+        font-family: $montserrat;
+        font-weight: 300;
+        font-size: 16px;
+        color: #8c8c8c;
+        line-height: 28px;
+        margin-bottom: 37px;
+        text-align: center;
+        max-width: 770px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    &__card {
+
+        position: relative;
+
+        &:hover &-overlay {
+            opacity: 1;
+        }
+
+        &:hover &-date_day {
+            background: #c7b299;
+        }
+
+        &:hover &-date_month {
+            background: #a48d72;
+        }
+
+        &:hover &-panel {
+            background: #362f2d;
+        }
+
+        &:hover &-title {
+            color: #c7b299;
+        }
+
+        &:hover &-description {
+            color: white;
+        }
+
+        &-overlay {
+            position: absolute;
+            height: 220px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        &-date {
+            position: absolute;
+            z-index: 1;
+            width: 50px;
+            top: 20px;
+            left: 20px;
+            border-radius: 3px;
+            overflow: hidden;
+
+            &_day {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 24px;
+                color: white;
+                background: #363636;
+                padding: 9px 0;
+                line-height: 18px;
+                text-align: center;
+            }
+
+            &_month {
+                font-family: $roboto;
+                font-weight: 400;
+                font-size: 12px;
+                color: white;
+                background: #252525;
+                padding: 7px 0;
+                line-height: 10px;
+                text-align: center;
+            }
+        }
+
+        &-slider {
+
+            & .carousel-indicators li {
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                border: 2px solid transparent;
+                background: rgba(255, 255, 255, 0.3);
+
+                &.active{
+                    background: transparent;
+                    border: 2px solid #d3c1ad;
+                }
+            }
+        }
+
+        &-panel {
+            padding: 30px;
+            background: white;
+        }
+
+        &-title {
+            font-family: $raleway;
+            font-weight: 500;
+            font-size: 20px;
+            color: #555555;
+            line-height: 16px;
+            margin-bottom: 20px;
+        }
+
+        &-description {
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 14px;
+            color: #8c8c8c;
+            line-height: 22px;
+            margin-bottom: 27px;
+        }
+
+        &-link {
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 14px;
+            color: #c7b299;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: #c7b299;
+            }
+
+            & i {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    &__controls {
+        &_btn {
+            color: #cab79f;
+            font-size: 20px;
+            margin: 0 2px;
+
+            &:hover {
+                color: #cab79f;
+            }
+        }
+    }
+}
