@@ -1,0 +1,13 @@
+.main-partners{
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background: url(../images/partners_bg.webp) center / cover no-repeat;
+
+    &__content{
+        display: grid;
+        align-items: center;
+        
+        grid-template-columns: repeat(4, 1fr);
+        gap: 80px;
+    }
+}
