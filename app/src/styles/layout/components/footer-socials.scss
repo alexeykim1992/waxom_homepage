@@ -1,0 +1,165 @@
+.footer-socials {
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #191919;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    &__title {
+        font-size: $raleway;
+        font-weight: 700;
+        font-size: 24px;
+        color: white;
+        line-height: 18px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    &__about {
+
+        &-logo {
+            display: block;
+            color: white;
+            font-family: $raleway;
+            font-size: 34px;
+            font-weight: 400;
+            margin-bottom: 25px;
+
+            &:hover {
+                color: white;
+            }
+
+            &_img {
+                margin-right: -5px;
+            }
+        }
+
+        &-description {
+            font-family: $montserrat;
+            font-weight: 300;
+            font-size: 14px;
+            color: #555555;
+            line-height: 26px;
+            margin-bottom: 28px;
+        }
+
+        &-link {
+            font-family: $montserrat;
+            font-weight: 400;
+            font-size: 14px;
+            color: #d1d1d1;
+            display: flex;
+            align-items: center;
+
+            & i {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: #d1d1d1;
+            }
+        }
+    }
+
+    &__posts {
+
+
+        &-card {
+
+            display: block;
+            padding: 20px 0;
+            border-bottom: 1px solid #252525;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            &:hover &-date {
+                color: white;
+            }
+
+            &:hover &-text {
+                color: #c7b299;
+            }
+
+            &-date {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 12px;
+                color: #363636;
+                margin-bottom: 10px;
+            }
+
+            &-text {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;
+                line-height: 21px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__twitter {
+
+        &-card {
+            display: block;
+            padding: 20px 0;
+            border-bottom: 1px solid #252525;
+
+            &:last-of-type {
+                border-bottom: none;
+            }
+
+            &-text {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 14px;
+                color: #555555;
+                line-height: 21px;
+                margin-bottom: 10px;
+
+                &-assign {
+                    color: #00bff3;
+
+                    &:hover {
+                        color: #00bff3;
+
+                    }
+                }
+
+                &-link {
+                    color: #959595;
+
+                    &:hover {
+                        color: #959595;
+                    }
+                }
+            }
+
+            &-time {
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 12px;
+                color: #363636;
+                line-height: 9px;
+            }
+        }
+    }
+
+    &__dribble{
+
+        &-content{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+}
