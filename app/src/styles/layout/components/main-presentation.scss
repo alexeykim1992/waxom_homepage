@@ -1,12 +1,29 @@
 .presentation {
-    background: url(../images/video_preview.webp) center / cover no-repeat;
+    
+    position: relative;
     padding-top: 210px;
     padding-bottom: 210px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+
+    &:hover &__icon{
+        z-index: 1;
+    }
+
+    &__video {
+        position: absolute;
+        height: 100%;
+        z-index: -1;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
 
     &__icon {
+        position: relative;
+        z-index: 0;
         padding: 15px;
         background: rgba(0, 0, 0, 0.2);
         border-radius: 50%;
@@ -25,7 +42,7 @@
         text-align: center;
     }
 
-    &__description{
+    &__description {
         font-family: $montserrat;
         font-weight: 300;
         font-size: 16px;
@@ -36,10 +53,10 @@
         text-align: center;
     }
 
-    &__duration{
+    &__duration {
         font-family: $montserrat;
         font-weight: 400;
         font-size: 14px;
-        color: #c7b299;        
+        color: #c7b299;
     }
 }
