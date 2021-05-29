@@ -13,5 +13,9 @@
         &:hover {
             color: white;
         }
+
+        @include media ($md) {
+            padding: 15px 30px;
+        }
     }
 }

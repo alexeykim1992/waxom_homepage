@@ -22,9 +22,24 @@
             font-family: $raleway;
             font-weight: 400;
             font-size: 36px;
+            text-align: center;
             color: white;
             line-height: 26px;
             margin-bottom: 23px;
+
+            @include media($xl) {
+                font-size: 32px;
+            }
+
+            @include media($lg) {
+                font-size: 28px;
+                margin-bottom: 18px;
+            }
+
+            @include media($md) {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
         }
 
         &-title {
@@ -32,39 +47,90 @@
             font-weight: 800;
             font-size: 52px;
             color: white;
+            text-align: center;
             line-height: 40px;
             margin-bottom: 28px;
+
+            @include media($xl) {
+                font-size: 45px;
+            }
+
+            @include media($lg) {
+                font-size: 38px;
+                margin-bottom: 23px;
+                line-height: 30px;
+            }
+
+            @include media($md) {
+                font-size: 32px;
+                margin-bottom: 13px;
+            }
         }
 
         &-description {
             font-family: $montserrat;
+            text-align: center;
             font-weight: 300;
             font-size: 16px;
             color: white;
             line-height: 25px;
             max-width: 570px;
             margin-bottom: 50px;
+
+            @include media($lg){
+                margin-bottom: 30px;
+            }
+
+            @include media($md){
+                max-width: 360px;
+                font-size: 14px;
+                line-height: 22px;
+            }
         }
     }
 
     &__arrow {
         font-size: 72px;
+
+        @include media($lg){
+            font-size: 65px;
+        }
     }
 
     & .carousel-control-prev {
         left: -100px;
         width: fit-content;
+
+        @include media($xxl) {
+            left: 0px;
+        }
+
+        @include media($sm) {
+           display: none;
+        }
     }
 
     & .carousel-control-next {
         right: -100px;
         width: fit-content;
+        
+        @include media($xxl) {
+            right: 0px;
+        }
+
+        @include media($sm) {
+            display: none;
+         }
     }
 
     & .carousel-indicators{
         display: flex;
         align-items: center;
         margin-bottom: 40px;
+
+        @include media($md) {
+            margin-bottom: 20px;
+        }
     }
 
     .carousel-indicators &__dot {

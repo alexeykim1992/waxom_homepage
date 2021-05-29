@@ -1,4 +1,4 @@
-.header-nav{
+.header-nav {
 
     width: 100%;
     display: flex;
@@ -6,45 +6,98 @@
     align-items: center;
     margin-top: 40px;
 
-    &.navbar{
-        padding: 0;
+    @include media($lg) {
+        margin-top: 20px;
     }
 
-    &__logo{
+    &.navbar {
+        padding: 0;
+
+        @include media($sm) {
+            padding: 0 30px;
+        }
+    }
+
+    &__logo {
         color: white;
         font-family: $raleway;
         font-size: 34px;
         font-weight: 400;
 
-        &:hover{
+        &:hover {
             color: white;
         }
 
-        &_img{
+        &_img {
             margin-right: -5px;
+
+            @include media($sm) {
+                height: 45px;
+            }
         }
     }
 
-    &__controls{
+    &__controls {
+        position: relative;
         display: flex;
+        align-items: center;
+
+        &-menu {
+            z-index: 1;
+
+            @include media($lg) {
+                position: absolute;
+                text-align: center;
+                padding: 10px;
+                border-radius: 10px;
+                left: 0%;
+                top: calc(100% + 10px);
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        &-button {
+            font-size: 25px;
+            color: white;
+            height: fit-content;
+            width: fit-content;
+        }
     }
 
-    &__list{
-        .navbar-expand-lg .navbar-nav &_link.nav-link{ 
+    &__list {
+        .navbar-expand-lg .navbar-nav &_link.nav-link {
             color: white;
             font-family: $montserrat;
             font-weight: 300;
             font-size: 14px;
             padding: 0;
             margin-right: 34px;
-            &:hover{
+
+            &:hover {
                 color: #c7b299;
             }
-        }        
+
+            @include media($xxl) {
+                margin-right: 25px;
+            }
+
+            @include media($xl) {
+                margin-right: 20px;
+            }
+
+            @include media($lg) {
+                margin-right: 0;
+                padding: 5px 0;
+            }
+        }
     }
 
-    &__icon-link{
+    &__icon-link {
         margin-left: 28px;
+
+        @include media($xl) {
+            margin-left: 15px;
+        }
     }
-   
+
 }
