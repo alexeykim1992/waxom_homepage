@@ -4,14 +4,37 @@
     padding-bottom: 50px;
     background: #111111;
 
+    @include media($lg) {
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+
+    @include media($sm) {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
     &__content {
         display: flex;
-        justify-content: space-between;        
+        justify-content: space-between;
+
+        @include media($lg) {
+            justify-content: center;
+        }
     }
 
     &__left {
         display: flex;
         align-items: center;
+
+        @include media($lg) {
+            margin-bottom: 5px;
+        }
+
+        @include media($sm) {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
 
         &-copyright {
             font-family: $montserrat;
@@ -19,10 +42,14 @@
             font-size: 13px;
             color: #555555;
             margin-right: 12px;
-            border-left: 1px solid #252525;
 
             &-span {
                 color: #959595;
+            }
+
+            @include media($sm) {
+                text-align: center;
+                margin-bottom: 5px;
             }
         }
 
@@ -42,12 +69,20 @@
                 &:hover {
                     color: #c7b299;
                 }
+                
+                @include media($sm) {
+                    li:first-of-type & {
+                        border-left: none;
+                    }
+                }
             }
         }
     }
 
     &__right {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
         &-author {
             font-family: $montserrat;
@@ -67,6 +102,14 @@
 
             &:first-of-type {
                 border-left: none;
+            }
+
+            @include media($xsm) {
+                border-left: none;
+                
+                &:first-of-type{
+                    margin-bottom: 5px;
+                }
             }
         }
     }

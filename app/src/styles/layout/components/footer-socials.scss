@@ -4,23 +4,89 @@
     padding-bottom: 80px;
     background: #191919;
 
+    @include media($lg) {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    @include media($md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include media($sm) {
+        &__posts,
+        &__twitter,
+        &__dribble {
+            display: none;
+        }
+    }
+
     &__content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+
+        @include media($lg) {
+            grid-template-columns: 1fr 1fr 180px;
+        }
+
+        @include media($md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include media($sm) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__title {
         font-size: $raleway;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 24px;
         color: white;
         line-height: 18px;
         margin-bottom: 10px;
         margin-top: 30px;
+        order: 0;
+
+        @include media($lg) {
+            margin-top: 0;
+        }
+
+        @include media($md) {
+            &:first-of-type{ 
+                margin-top: 30px;
+            }
+        }
     }
 
     &__about {
+        @include media($lg) {
+            width: fit-content;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @include media($md) {
+            grid-column-end: 2;
+            display: block;
+        }
+
+        @include media($sm) {
+            &-logo{
+                text-align: center;
+            }
+
+            &-description {
+                max-width: 360px;
+                text-align: justify;
+            }
+        }
 
         &-logo {
             display: block;
@@ -63,11 +129,15 @@
             &:hover {
                 color: #d1d1d1;
             }
+
+            @include media($lg) {
+                grid-column-start: 2;
+            }
         }
     }
 
     &__posts {
-
+        order: 2;
 
         &-card {
 
@@ -107,6 +177,7 @@
     }
 
     &__twitter {
+        order: 3;
 
         &-card {
             display: block;
@@ -153,13 +224,28 @@
         }
     }
 
-    &__dribble{
+    &__dribble {
+        order: 4;
 
-        &-content{
+        @include media($md) {
+            order: 1;
+        }
+
+        &-content {
             margin-top: 30px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+
+            @include media($lg) {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+
+            @include media($md) {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
         }
     }
 }
