@@ -1,13 +1,59 @@
-.main-partners{
+.main-partners {
     padding-top: 140px;
     padding-bottom: 140px;
     background: url(../images/partners_bg.webp) center / cover no-repeat;
 
-    &__content{
+    &__content {
         display: grid;
         align-items: center;
-        
         grid-template-columns: repeat(4, 1fr);
         gap: 80px;
+    }
+
+    @include media($xl) {
+        &__content {
+            gap: 60px;
+        }
+
+        &__img {
+            width: 190px;
+        }
+    }
+
+    @include media($lg) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &__content {
+            gap: 25px;
+        }
+
+        &__img {
+            width: 150px;
+        }
+    }
+
+    @include media($md) {
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        &__img{
+            width: 115px;
+        }
+    }    
+
+    @include media($sm) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        &__content{
+            grid-template-columns: 1fr 1fr;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        &__img{
+            width: 125px;
+        }
     }
 }

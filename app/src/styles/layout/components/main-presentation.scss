@@ -8,6 +8,31 @@
     align-items: center;
     overflow: hidden;
 
+    @include media($xl) {
+        padding-top: 180px;
+        padding-bottom: 180px;
+    }
+
+    @include media($lg) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @include media($md) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    @include media($sm) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include media($xsm) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     &:hover &__icon{
         z-index: 1;
     }
@@ -30,6 +55,16 @@
         color: white;
         font-size: 70px;
         margin-bottom: 45px;
+
+        @include media($lg) {
+            font-size: 55px;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        
+        @include media($md){
+            margin-bottom: 20px;
+        }
     }
 
     &__title {
@@ -40,6 +75,15 @@
         line-height: 22px;
         margin-bottom: 26px;
         text-align: center;
+
+        @include media($lg) {
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+
+        @include media($md){
+            font-size: 22px;
+        }
     }
 
     &__description {
@@ -51,6 +95,20 @@
         margin-bottom: 37px;
         max-width: 560px;
         text-align: center;
+
+        @include media($lg) {
+            margin-bottom: 25px;
+        }
+
+        @include media($sm) {
+            max-width: 340px;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        @include media($xsm) {
+            max-width: 280px;
+        }
     }
 
     &__duration {

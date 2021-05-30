@@ -6,6 +6,16 @@
     padding-top: 80px;
     padding-bottom: 80px;
 
+    @include media($lg) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @include media($md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
     &__title {
         font-family: $raleway;
         font-weight: 600;
@@ -14,6 +24,15 @@
         text-align: center;
         line-height: 22px;
         margin-bottom: 25px;
+
+        @include media($lg) {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        @include media($md) {
+            font-size: 22px;
+        }
     }
 
     &__description {
@@ -25,11 +44,34 @@
         max-width: 770px;
         line-height: 28px;
         margin-bottom: 35px;
+
+        @include media($lg) {
+            max-width: 580px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+
+        @include media($md) {
+            margin-bottom: 10px;
+            max-width: 480px;
+            font-size: 14px;
+            line-height: 20px;
+        }
     }
 
     &__tabs {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 40px;
+
+        @include media($lg) {
+            margin-bottom: 25px;
+        }
+
+        @include media($md) {
+            margin-bottom: 15px;
+        }
 
         &-link {
             font-family: $montserrat;
@@ -46,6 +88,10 @@
             &:hover {
                 color: #8c8c8c;
             }
+
+            @include media($md) {
+                margin: 5px 15px;
+            }
         }
 
         &-link.active {
@@ -61,41 +107,84 @@
         gap: 30px;
         margin-bottom: 40px;
 
+        @include media($lg) {
+            margin-bottom: 30px;
+        }
+
+        @include media($md) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 20px;
+        }
+
+        @include media($sm) {
+            grid-template-columns: 1fr;
+        }
+
         &-item {
             display: block;
             position: relative;
 
-            &:hover &-overlay{
+            @include media($sm) {
+                width: 280px;
+
+                &:nth-last-of-type(-n+2) {
+                    display: none;
+                }
+            }
+
+            @include media($md) {
+                &:nth-of-type(-n+2) {
+                    display: none;
+                }
+            }
+
+            &:hover &-overlay {
                 opacity: 1;
             }
 
-            &:hover &-label{
+            &:hover &-label {
                 background: #362f2d;
             }
 
-            &:hover &-label::before{                
-                border-bottom: 10px solid #362f2d;                
+            &:hover &-label::before {
+                border-bottom: 10px solid #362f2d;
             }
 
-            &:hover &-title{
+            &:hover &-title {
                 color: white;
             }
 
-            &:hover &-description{
+            &:hover &-description {
                 color: #c7b299;
             }
 
             &-overlay {
                 position: absolute;
                 left: 0;
-                top: 0;                
+                top: 0;
                 opacity: 0;
                 background: rgba(0, 0, 0, 0.5);
-                height: 240px;
+                height: 288px;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                @include media($xl) {
+                    height: 240px;
+                }
+
+                @include media($lg) {
+                    height: 176px;
+                }
+
+                @include media($md) {
+                    height: 204px;
+                }
+
+                @include media($sm) {
+                    height: 224px;
+                }
 
                 &_link {
                     font-size: 25px;
@@ -109,8 +198,20 @@
             }
 
             &-img {
-                height: 240px;
+                height: 288px;
                 width: 100%;
+
+                @include media($xl) {
+                    height: 240px;
+                }
+
+                @include media($lg) {
+                    height: 176px;
+                }
+
+                @include media($md) {
+                    height: 204px;
+                }
             }
 
             &-label {
@@ -118,6 +219,10 @@
                 position: relative;
                 background: #fbfaf8;
                 padding: 30px;
+
+                @include media($lg) {
+                    padding: 15px;
+                }
 
                 &::before {
                     content: '';
@@ -139,6 +244,12 @@
                 color: #c7b299;
                 line-height: 15px;
                 margin-bottom: 15px;
+
+                @include media($lg) {
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin-bottom: 8px;
+                }
             }
 
             &-description {

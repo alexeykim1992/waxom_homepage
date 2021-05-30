@@ -28,6 +28,13 @@
             color: white;
         }
 
+        &-text {
+
+            @include media($sm){
+                display: none;
+            }            
+        }
+
         &_img {
             margin-right: -5px;
 

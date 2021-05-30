@@ -1,21 +1,49 @@
 .main-device {
-    display: flex;
-    justify-content: space-between;
     padding-top: 80px;
+
+    @include media($lg) {
+        padding-top: 60px;
+    }
+
+    @include media($md) {
+        padding-top: 40px;
+    }
+
+    @include media($sm) {
+        padding-top: 20px;
+    }
 
     &__content {
         display: grid;
         grid-template-columns: 5fr 7fr;
         gap: 30px;
+
+        @include media($sm) {
+            gap: 20px;
+        }
+
+        @include media($xsm){
+            margin: 0 20px;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__panel {
         padding-top: 115px;
-        padding-bottom: 180px;
+
+        @include media($xl) {
+            padding-top: 60px;
+
+        }
+
+        @include media($lg) {
+            padding-top: 15px;
+        }
     }
 
     &__pic {
         width: 100%;
+        align-self: end;
     }
 
     &__title {
@@ -25,6 +53,25 @@
         color: #555555;
         line-height: 22px;
         margin-bottom: 35px;
+
+        @include media($lg) {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        @include media($md) {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        @include media($sm) {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        @include media($xsm) {
+            text-align: center;
+        }
     }
 
     &__description {
@@ -34,10 +81,38 @@
         color: #8c8c8c;
         line-height: 28px;
         margin-bottom: 38px;
+
+        @include media($lg) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+        }
+
+        @include media($md) {
+            font-size: 14px;
+            line-height: 20px;
+            text-align: justify;
+        }
+
+        @include media($sm) {
+            line-height: 16px;
+        }
+
+        @include media($xsm) {
+            display: none;
+        }
     }
 
     &__list {
         margin-left: 35px;
+
+        @include media($lg) {
+            margin-left: 20px;
+        }
+
+        @include media($md) {
+            display: none;
+        }
 
         &-item {
             display: flex;
@@ -48,10 +123,19 @@
             color: #8c8c8c;
             margin-bottom: 12px;
 
+            @include media($lg) {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
             & i {
                 margin-right: 25px;
                 font-size: 20px;
                 color: #c7b299;
+
+                @include media($lg) {
+                    margin-right: 15px;
+                }
             }
 
             &:last-of-type {

@@ -1,23 +1,69 @@
-.main-stats{
+.main-stats {
 
     background: linear-gradient(90deg, #211b19, #4e3427);
     padding-top: 70px;
     padding-bottom: 60px;
 
-    &__content{
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    @include media($lg) {
+        padding-top: 50px;
+        padding-bottom: 40px;
     }
 
-    &__card{
+    &__content {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        gap: 70px;
+
+        @include media($xl) {
+            gap: 50px;
+        }
+
+        @include media($lg) {
+            gap: 30px;
+        }
+
+        @include media($md) {
+            gap: 20px;
+        }
+
+        @include media($sm) {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0 35px;
         width: 140px;
 
-        &-number{
+        @include media($lg) {
+            width: 100px;
+        }
+
+        @include media($md) {
+            width: 90px;
+
+            & img {
+                width: 38px;
+                height: 38px;
+            }
+        }
+        
+        @include media($sm) {
+            width: 120px;
+        }
+
+        @include media($xsm) {
+            width: 100px;
+        }
+
+        &-number {
             font-family: $montserrat;
             font-weight: 100;
             font-size: 48px;
@@ -25,19 +71,40 @@
             line-height: 35px;
             margin-top: 30px;
             margin-bottom: 20px;
+
+            @include media($lg) {
+                font-size: 40px;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+
+            @include media($md) {
+                font-size: 30px;
+                margin-top: 15px;
+                margin-bottom: 8px;
+            }
         }
-    
-        &-title{
+
+        &-title {
             font-family: $montserrat;
             font-weight: 300;
             font-size: 14px;
-            color: #c7b299;
             line-height: 12px;
+            color: #c7b299;
             margin-bottom: 30px;
             text-transform: uppercase;
+            text-align: center;
+
+            @include media($lg) {
+                line-height: 18px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
         }
 
-        &::after{
+        &::after {
             content: "";
             width: 30px;
             height: 2px;
@@ -46,5 +113,5 @@
         }
     }
 
-    
+
 }
